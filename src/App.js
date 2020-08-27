@@ -1,9 +1,12 @@
 import React from 'react';
-import Header from './Header';
+
+import './global.css';
+
+import SignIn from './pages/SignIn';
 
 function App() {
   return (
-    <Header title="Be The Hero" />
+    <SignIn />
   );
 }
 
