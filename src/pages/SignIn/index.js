@@ -10,16 +10,16 @@ import heroesImg from '../../assets/heroes.png';
 import logoImg from '../../assets/logo.svg';
 
 export default function SignIn() {
-  const [id, setId] = useState('');
+  const [email, setEmail] = useState('');
   const history = useHistory();
 
   async function handleLogin(event) {
     event.preventDefault();
 
     try {
-      const res = await api.post('sessions', { id });
+      const res = await api.post('sessions', { email });
 
-      localStorage.setItem('ongId',id)
+      localStorage.setItem('ongId',res.data.id)
       localStorage.setItem('ongName',res.data.name);
 
       history.push('/profile');
@@ -38,8 +38,8 @@ export default function SignIn() {
 
           <input
             placeholder="Sua ID"
-            value={id}
-            onChange={e => setId(e.target.value)} />
+            value={email}
+            onChange={e => setEmail(e.target.value)} />
           <button className="button" type="submit">Entrar</button>
 
           <Link className="back-link" to="/register">
