@@ -37,7 +37,7 @@ export default function SignIn() {
           <h1>Faça seu logon</h1>
 
           <input
-            placeholder="Sua ID"
+            placeholder="Sua Email"
             value={email}
             onChange={e => setEmail(e.target.value)} />
           <button className="button" type="submit">Entrar</button>

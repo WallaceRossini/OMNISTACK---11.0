@@ -49,8 +49,8 @@ export default function Register() {
 
           <Link className="back-link" to="/">
             <FiArrowLeft size={16} color='#E02141' />
-                      Não tenho cadastro
-                  </Link>
+            Não tenho cadastro
+          </Link>
         </section>
         <form onSubmit={handleRegister}>
           <input
